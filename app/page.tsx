@@ -1,6 +1,8 @@
 'use client';
 import { AnimatePresence,motion } from "framer-motion";
 import Link from "next/link";
+import './nav.css';
+import Footer from "./(home)/components/footer";
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
     <AnimatePresence>
     <motion.div initial={{ opacity:0, y:15 }} animate={{ opacity:1, y:0}} exit={{ opacity:0, y: 15 }} transition={{ delay: 0.45}}>
     <img className="mt-[20px] ml-[10px]" src="logo.png" />
-      <div className="button-container ml-[1100px] mt-[-45px]">
+      <div className="button-container float-right mt-[-45px] mr-[40px]">
         <button className="button">
           <svg
             className="icon"
@@ -82,6 +84,10 @@ export default function Home() {
           </svg>
         </button>
       </div>
+{/* 
+    <div className="spinner ml-[1350px] mt-[-50px]">
+        <div className="spinner1"></div>
+    </div> */}
 
       {/* image and contents */}
 
@@ -155,6 +161,7 @@ export default function Home() {
         </Link>
  
       </div>
+      <Footer />
       </motion.div>
       </AnimatePresence>
   </div>

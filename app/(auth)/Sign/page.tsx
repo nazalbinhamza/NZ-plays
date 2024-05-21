@@ -4,6 +4,7 @@ import "./sign.css";
 function page() {
   return (
     <div>
+      <img className="mt-[20px] ml-[10px]" src="logo.png"/>
       <div className="login-box">
         <p>Login</p>
         <form>
